@@ -11,6 +11,7 @@ using MedicalCenter.DomainModel.Interfaces.Repositories;
 using MedicalCenter.Infrastructure.DataAccess.Repositories;
 using MedicalCenter.DomainService.Interfaces;
 using MedicalCenter.DomainService;
+using MedicalCenter.DomainService.Services;
 
 namespace MedicalCenter.WebApplication
 {

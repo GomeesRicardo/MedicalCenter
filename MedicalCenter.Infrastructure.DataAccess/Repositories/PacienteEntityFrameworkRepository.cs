@@ -11,9 +11,9 @@ namespace MedicalCenter.Infrastructure.DataAccess.Repositories
     {
         private readonly MedicalCenterContext _db;
 
-        public PacienteEntityFrameworkRepository(MedicalCenterContext db)
+        public PacienteEntityFrameworkRepository()
         {
-            _db = db;
+            _db = new MedicalCenterContext();
         }
 
         public void Create(Paciente entity)

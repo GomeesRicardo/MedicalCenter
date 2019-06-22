@@ -10,41 +10,41 @@ namespace MedicalCenter.DomainService.Services
 {
     public class PacienteService : IPacienteService
     {
-        private readonly IPacienteRepository _PacienteRepository;
+        private readonly IPacienteRepository _pacienteRepository;
 
-        public PacienteService(IPacienteRepository PacienteRepository)
+        public PacienteService(IPacienteRepository pacienteRepository)
         {
-            _PacienteRepository = PacienteRepository;
+            _pacienteRepository = pacienteRepository;
         }
 
         public IEnumerable<Paciente> ReadAll()
         {
-            return _PacienteRepository.ReadAll();
+            return _pacienteRepository.ReadAll();
         }
 
         public void Create(Paciente Paciente)
         {
-            _PacienteRepository.Create(Paciente);
+            _pacienteRepository.Create(Paciente);
         }
 
         public void Update(Paciente Paciente)
         {
-            _PacienteRepository.Update(Paciente);
+            _pacienteRepository.Update(Paciente);
         }
 
         public Paciente Read(Guid id)
         {
-            return _PacienteRepository.Read(id);
+            return _pacienteRepository.Read(id);
         }
 
         public void Delete(Guid id)
         {
-            _PacienteRepository.Delete(id);
+            _pacienteRepository.Delete(id);
         }
 
         public void Complete()
         {
-            _PacienteRepository.SaveChanges();
+            _pacienteRepository.SaveChanges();
         }
     }
 }
