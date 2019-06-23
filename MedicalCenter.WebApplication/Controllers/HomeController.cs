@@ -13,20 +13,17 @@ namespace MedicalCenter.WebApplication.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly MedicalCenterContext _context;
-        //private readonly IPacienteService _pacienteService;
+        private readonly IPacienteService _pacienteService;
 
-        public HomeController(/*IPacienteService pacienteService*/)
+        public HomeController(IPacienteService pacienteService)
         {
-            MedicalCenterContext context = new MedicalCenterContext();
-            _context = context;
-            //_pacienteService = pacienteService;
+            _pacienteService = pacienteService;
         }
 
         public async Task<IActionResult> Index()
         {
-            //var aaaa = _pacienteService.ReadAll();
-            return View(await _context.Pacientes.ToListAsync());
+            var aaaa = _pacienteService.ReadAll();
+            return View(aaaa.ToList());
         }
 
         //public IActionResult Index()

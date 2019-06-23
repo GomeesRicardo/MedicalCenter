@@ -118,6 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="DbConnectionString" xml:space="preserve">
-    <value>Data Source=ILL-PC-003;Initial Catalog=MedicalCenter;Persist Security Info=True;Integrated Security=true;</value>
+    <value>Data Source=DESKTOP-E497JE2\SQL2012RUHAN;Initial Catalog=MedicalCenter;Persist Security Info=True;Integrated Security=true;</value>
   </data>
 </root>
