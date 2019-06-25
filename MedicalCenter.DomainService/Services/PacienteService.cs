@@ -17,22 +17,22 @@ namespace MedicalCenter.DomainService.Services
             _pacienteRepository = pacienteRepository;
         }
 
-        public IEnumerable<Paciente> ReadAll()
+        public IEnumerable<Pacientes> ReadAll()
         {
             return _pacienteRepository.ReadAll();
         }
 
-        public void Create(Paciente Paciente)
+        public void Create(Pacientes Paciente)
         {
             _pacienteRepository.Create(Paciente);
         }
 
-        public void Update(Paciente Paciente)
+        public void Update(Pacientes Paciente)
         {
             _pacienteRepository.Update(Paciente);
         }
 
-        public Paciente Read(Guid id)
+        public Pacientes Read(Guid id)
         {
             return _pacienteRepository.Read(id);
         }
@@ -42,7 +42,7 @@ namespace MedicalCenter.DomainService.Services
             _pacienteRepository.Delete(id);
         }
 
-        public void Complete()
+        public void SaveChanges()
         {
             _pacienteRepository.SaveChanges();
         }
