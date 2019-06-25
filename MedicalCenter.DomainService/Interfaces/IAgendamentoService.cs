@@ -5,7 +5,8 @@ using System.Text;
 
 namespace MedicalCenter.DomainService.Interfaces
 {
-    public interface IPacienteService : IService<Pacientes, Guid>
+    public interface IAgendamentoService : IService<Agendamentos, Guid>
     {
+        bool VerificarDataHoraAproximadaNaClinica(Agendamentos Agendamento);
     }
 }

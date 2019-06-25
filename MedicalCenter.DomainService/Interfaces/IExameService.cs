@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MedicalCenter.DomainService.Interfaces
 {
-    public interface IPacienteService : IService<Pacientes, Guid>
+    public interface IExameService : IService<Exames, Guid>
     {
     }
 }
