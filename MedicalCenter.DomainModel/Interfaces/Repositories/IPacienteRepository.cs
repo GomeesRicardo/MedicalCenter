@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MedicalCenter.DomainModel.Interfaces.Repositories
 {
-    public interface IPacienteRepository : IRepository<Paciente, Guid>
+    public interface IPacienteRepository : IRepository<Pacientes, Guid>
     {
     }
 }

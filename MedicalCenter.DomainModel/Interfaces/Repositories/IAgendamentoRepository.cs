@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MedicalCenter.DomainModel.Interfaces.Repositories
 {
-    public interface IAgendamentoRepository : IRepository<Agendamento, Guid>
+    public interface IAgendamentoRepository : IRepository<Agendamentos, Guid>
     {
     }
 }
