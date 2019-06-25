@@ -16,7 +16,7 @@ namespace MedicalCenter.Infrastructure.DataAccess.Repositories
             _db = new MedicalCenterContext();
         }
 
-        public void Create(Paciente entity)
+        public void Create(Pacientes entity)
         {
             _db.Pacientes.Add(entity);
             _db.SaveChanges();
@@ -28,17 +28,17 @@ namespace MedicalCenter.Infrastructure.DataAccess.Repositories
             _db.SaveChanges();
         }
 
-        public Paciente Read(Guid id)
+        public Pacientes Read(Guid id)
         {
             return _db.Pacientes.Find(id);
         }
 
-        public IEnumerable<Paciente> ReadAll()
+        public IEnumerable<Pacientes> ReadAll()
         {
             return _db.Pacientes;
         }
 
-        public void Update(Paciente entity)
+        public void Update(Pacientes entity)
         {
             _db.Pacientes.Update(entity);
             _db.SaveChanges();

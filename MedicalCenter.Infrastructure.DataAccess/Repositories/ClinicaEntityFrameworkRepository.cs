@@ -1,4 +1,5 @@
 ﻿using MedicalCenter.DomainModel.Entities;
+using MedicalCenter.DomainModel.Interfaces.Repositories;
 using MedicalCenter.Infrastructure.DataAccess.Contexts;
 using System;
 using System.Collections.Generic;
@@ -6,16 +7,16 @@ using System.Text;
 
 namespace MedicalCenter.Infrastructure.DataAccess.Repositories
 {
-    public class ClinicaEntityFrameworkRepository
+    public class ClinicaEntityFrameworkRepository : IClinicaRepository
     {
         private readonly MedicalCenterContext _db;
 
-        public ClinicaEntityFrameworkRepository(MedicalCenterContext db)
+        public ClinicaEntityFrameworkRepository()
         {
-            _db = db;
+            _db = new MedicalCenterContext();
         }
 
-        public void Create(Clinica entity)
+        public void Create(Clinicas entity)
         {
             _db.Clinicas.Add(entity);
             _db.SaveChanges();
@@ -27,17 +28,17 @@ namespace MedicalCenter.Infrastructure.DataAccess.Repositories
             _db.SaveChanges();
         }
 
-        public Clinica Read(Guid id)
+        public Clinicas Read(Guid id)
         {
             return _db.Clinicas.Find(id);
         }
 
-        public IEnumerable<Clinica> ReadAll()
+        public IEnumerable<Clinicas> ReadAll()
         {
             return _db.Clinicas;
         }
 
-        public void Update(Clinica entity)
+        public void Update(Clinicas entity)
         {
             _db.Clinicas.Update(entity);
             _db.SaveChanges();
