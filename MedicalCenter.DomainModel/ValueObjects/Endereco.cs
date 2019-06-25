@@ -15,7 +15,7 @@ namespace MedicalCenter.DomainModel.ValueObjects
                 throw new ArgumentOutOfRangeException("Rua", "Indique o nome da rua");
 
             if (string.IsNullOrEmpty(numero))
-                throw new ArgumentOutOfRangeException("Rua", "Indique o número da rua");
+                throw new ArgumentOutOfRangeException("Número", "Indique o número da rua");
 
             Rua = rua;
             Numero = numero;
@@ -27,10 +27,15 @@ namespace MedicalCenter.DomainModel.ValueObjects
         }
 
         public static Endereco Parse(string enderecoStr)
+
         {
             var splittedEndereco = enderecoStr.Split(',');
             String rua = splittedEndereco[0];
-            String numero = splittedEndereco[1];
+            String numero = "";
+            if (splittedEndereco.Length > 1)
+            {
+                numero = splittedEndereco[1];
+            }
             return new Endereco(rua, numero);
         }
 
@@ -61,7 +66,7 @@ namespace MedicalCenter.DomainModel.ValueObjects
 
         public override string ToString()
         {
-            var end = this.Rua + this.Numero;
+            var end = this.Rua + "," + this.Numero;
             return end;
         }
     }
